@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassProjectE5">
         <activity
+            android:name=".CustomListView.CustomListPage"
+            android:exported="false" />
+        <activity
+            android:name=".Lists.SimpleList"
+            android:exported="false" />
+        <activity
             android:name=".AlertScreens.AlertScreen"
             android:exported="false" />
         <activity
