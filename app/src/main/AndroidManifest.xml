@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassProjectE5">
         <activity
+            android:name=".TestViewBinding.TestViewBindActivity"
+            android:exported="false" />
+        <activity
             android:name=".CustomListView.CustomListPage"
             android:exported="false" />
         <activity
