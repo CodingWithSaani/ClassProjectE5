@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.tutorials180.classprojecte5.CustomListView.CustomListPage
 import com.tutorials180.classprojecte5.ProjectObjects.Employee
 import java.lang.Exception
 
@@ -23,7 +24,8 @@ class MainActivity : AppCompatActivity() {
         {
            moveBtn=findViewById(R.id.move_btn)
            moveBtn.setOnClickListener {
-               moveToSecondScreen()
+               //moveToSecondScreen()
+               moveToCustomListPage()
            }
 
         }
@@ -46,6 +48,12 @@ class MainActivity : AppCompatActivity() {
 
         objectIntent.putExtra("employeeAli",objEmp)
         startActivity(objectIntent)
+    }
+
+
+    private fun moveToCustomListPage()
+    {
+        startActivity(Intent(MainActivity@this,CustomListPage::class.java))
     }
 
 }
