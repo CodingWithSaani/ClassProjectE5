@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import com.tutorials180.classprojecte5.R
 import com.tutorials180.classprojecte5.databinding.ActivitySimpleRoomBinding
 import java.lang.Exception
 
@@ -73,7 +72,7 @@ class SimpleRoomActivity : AppCompatActivity()
             }
             else
             {
-                Toast.makeText(applicationContext,"Some fileds are left empty",Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,"Some fields are left empty",Toast.LENGTH_LONG).show()
             }
         }
         catch (ex:Exception)
