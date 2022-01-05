@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.tutorials180.classprojecte5.CustomListView.CustomListPage
+import com.tutorials180.classprojecte5.LocationWorking.LocationWorkingActivity
 import com.tutorials180.classprojecte5.ProjectObjects.Employee
 import com.tutorials180.classprojecte5.SimpleRoomImplementation.SimpleRoomActivity
 import java.lang.Exception
@@ -55,7 +56,9 @@ class MainActivity : AppCompatActivity() {
     private fun moveToCustomListPage()
     {
         //startActivity(Intent(MainActivity@this,CustomListPage::class.java))
-        startActivity(Intent(MainActivity@this,SimpleRoomActivity::class.java))
+        //startActivity(Intent(MainActivity@this,SimpleRoomActivity::class.java))
+
+        startActivity(Intent(MainActivity@this,LocationWorkingActivity::class.java))
     }
 
 }

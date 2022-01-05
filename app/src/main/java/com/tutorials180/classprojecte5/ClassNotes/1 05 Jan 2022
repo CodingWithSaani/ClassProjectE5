@@ -1,0 +1,54 @@
+Class Learning Outcome
+1) How to access user device's location using GPS
+
+
+Steps to achieve CLO1
+step 1: Add permission to manifest file
+          i)FINE_LOCATION
+         ii)COARSE_LOCATION
+        iii)INTERNET
+
+Step 2: Add dependency to your build.gradle(app)
+        implementation 'com.google.android.gms:play-services-location:19.0.0'
+
+Step 3: Add new package for new concept
+Step 4: Add an activity to work and display location details. (LocationWorkingActivity)
+
+Step 5:
+         i)Add Button view to get LAT and LNG from device on XML
+        ii)Add TextView to show LAT on XML
+       iii)Add TextView to show LNG on XML
+
+Step 6: Declare and initialize ViewBinding object to get all views from the XML (activity_location_working.xml) in Kotlin file. (LocationWorkingActivity.kt)
+Step 7: Declare and initialize LocationManager class's object.
+
+Step 8: Implement LocationListener interface and implement its method onLocationChanged() in your activity LocationWorkingActivity
+Step 9: Implement onClickListener with lwGetLatLngBtn.
+
+Step10: Call user define fun getDeviceLocation() inside onClickListener of lwGetLatLngBtn
+Step11: Working with getDeviceLocation() function
+        11.1) Add try-catch block
+        11.2) Call requestLocationUpdates() fun with object LocationManger class
+        11.3) Add permission check before the call of requestLocationUpdates()
+        11.4) Call ActivityCompat.requestPermissions() to request the access of "access_fine_location" from user
+              inside permission check
+        11.5) override onRequestPermissionsResult() function in LocationWorkingActivity
+              <>This method will contain the result of the permission you have requested from the user using the requestPermission function.
+
+Step12: Show the lat and lng into onLocationChanged function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
