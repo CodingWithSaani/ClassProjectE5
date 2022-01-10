@@ -1,0 +1,15 @@
+<<Reverse GeoCoding>>
+Step 1: Declare and initialize the object of GeoCoder
+
+Step 2: Perform the reverseGeoCoding:
+        *reverseGeoCoding: Converting lat,lng to actual physical address
+
+Step 3: use the method getFromLocation(latitude,longitude,1) with the object of
+        GeoCoder class to get the List of Address
+Step 4: Get the address, town, city, postal code and country information
+        related to particular latitude, longitude.
+
+
+<<Sending Message>>
+Step 1: Declare and initialize the object of SMS Manager class
+        call the method sendTextMessage to send the message.

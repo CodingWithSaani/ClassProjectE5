@@ -3,21 +3,25 @@ package com.tutorials180.classprojecte5.LocationWorking
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
+import android.location.Geocoder
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.telephony.SmsManager
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.tutorials180.classprojecte5.R
 import com.tutorials180.classprojecte5.databinding.ActivityLocationWorkingBinding
+import java.util.*
 
 class LocationWorkingActivity : AppCompatActivity() , LocationListener
 {
     private lateinit var mLocationWorkingActivityBinding:ActivityLocationWorkingBinding  //Declare
     private lateinit var mLocationManager:LocationManager  //Declare
 
+    private lateinit var mGeoCoder:Geocoder     //Declare
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -25,6 +29,7 @@ class LocationWorkingActivity : AppCompatActivity() , LocationListener
         setContentView(mLocationWorkingActivityBinding.root)
 
         mLocationManager=getSystemService(Context.LOCATION_SERVICE) as LocationManager  //Initialize
+        mGeoCoder= Geocoder(LocationWorkingActivity@this, Locale.getDefault())
         mLocationWorkingActivityBinding.lwGetLatLngBtn.setOnClickListener { getDeviceLocation() }
     }
 
@@ -74,16 +79,30 @@ class LocationWorkingActivity : AppCompatActivity() , LocationListener
     {
         mLocationWorkingActivityBinding.lwLatTv.text="Latitude:"+location.latitude.toString()
         mLocationWorkingActivityBinding.lwLngTv.text="Longtitud:"+location.longitude.toString()
+
+        performReverseGeoCoding(location.latitude,location.longitude)
     }
 
+    private fun performReverseGeoCoding(latitude: Double, longitude: Double)
+    {
+        val addressDetails=mGeoCoder.getFromLocation(latitude,longitude,1)
+        var address =addressDetails[0].getAddressLine(0)
 
+        var town=addressDetails[0].subLocality
+        var city=addressDetails[0].locality
 
+        var province=addressDetails[0].adminArea
+        var zipCode=addressDetails[0].postalCode
 
+        var country=addressDetails[0].countryName
+    }
 
-
-
-
-
+    private fun sendMyOwnMessage()
+    {
+        val mSmsManager=SmsManager.getDefault()
+        mSmsManager.sendTextMessage("00923026711633",
+            null,"My Message",null,null)
+    }
 
 
 
