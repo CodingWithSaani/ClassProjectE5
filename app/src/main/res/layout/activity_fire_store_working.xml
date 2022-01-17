@@ -14,4 +14,66 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:text="Add Single Document"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fs_working_add_single_doc_with_model_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Add Single Document with Model"
+        android:layout_below="@id/fs_working_add_single_doc_btn"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fs_working_emp_name_et"
+        android:layout_below="@id/fs_working_add_single_doc_with_model_btn"
+        android:inputType="text"
+        android:maxLength="20"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Employee Name"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fs_working_emp_salary_et"
+        android:layout_below="@id/fs_working_emp_name_et"
+        android:inputType="number"
+        android:maxLength="10"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Employee Salary"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fs_working_emp_des_et"
+        android:layout_below="@id/fs_working_emp_salary_et"
+        android:inputType="text"
+        android:maxLength="10"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Employee Designation"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </RelativeLayout>
