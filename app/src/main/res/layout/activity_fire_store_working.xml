@@ -61,9 +61,34 @@
         />
 
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fs_working_get_single_doc_with_model_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Get Single Document with Model"
+        android:layout_below="@id/fs_working_emp_des_et"
+    />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fs_working_get_docs_with_model_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Get Documents with Model"
+        android:layout_below="@id/fs_working_get_single_doc_with_model_btn"
+        />
 
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fb_working_rv"
+        android:layout_below="@id/fs_working_get_docs_with_model_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
 
 
 
