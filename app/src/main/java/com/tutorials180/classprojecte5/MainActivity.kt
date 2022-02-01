@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.tutorials180.classprojecte5.CustomListView.CustomListPage
+import com.tutorials180.classprojecte5.FirebaseWorking.FbAuth.FbAuthActivity
 import com.tutorials180.classprojecte5.FirebaseWorking.FireStoreWorkingActivity
 import com.tutorials180.classprojecte5.LocationWorking.LocationWorkingActivity
 import com.tutorials180.classprojecte5.ProjectObjects.Employee
@@ -60,7 +61,8 @@ class MainActivity : AppCompatActivity() {
         //startActivity(Intent(MainActivity@this,SimpleRoomActivity::class.java))
 
 //        startActivity(Intent(MainActivity@this,LocationWorkingActivity::class.java))
-        startActivity(Intent(MainActivity@this,FireStoreWorkingActivity::class.java))
+        //startActivity(Intent(MainActivity@this,FireStoreWorkingActivity::class.java))
+        startActivity(Intent(MainActivity@this,FbAuthActivity::class.java))
     }
 
 }
