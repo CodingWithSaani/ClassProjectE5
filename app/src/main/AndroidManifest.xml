@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassProjectE5">
         <activity
+            android:name=".ServicesWorking.ServiceWorkingActivity"
+            android:exported="false" />
+        <activity
             android:name=".BroadCastReceivers.BroadCastWorkingActivity"
             android:exported="false" />
         <activity
@@ -52,6 +55,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".ServicesWorking.MyMediaService"/>
     </application>
 
 </manifest>
