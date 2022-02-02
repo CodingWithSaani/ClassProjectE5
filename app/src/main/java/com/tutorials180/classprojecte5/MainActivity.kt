@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.tutorials180.classprojecte5.BroadCastReceivers.BroadCastWorkingActivity
 import com.tutorials180.classprojecte5.CustomListView.CustomListPage
 import com.tutorials180.classprojecte5.FirebaseWorking.FbAuth.FbAuthActivity
 import com.tutorials180.classprojecte5.FirebaseWorking.FireStoreWorkingActivity
@@ -62,7 +63,8 @@ class MainActivity : AppCompatActivity() {
 
 //        startActivity(Intent(MainActivity@this,LocationWorkingActivity::class.java))
         //startActivity(Intent(MainActivity@this,FireStoreWorkingActivity::class.java))
-        startActivity(Intent(MainActivity@this,FbAuthActivity::class.java))
+        //startActivity(Intent(MainActivity@this,FbAuthActivity::class.java))
+        startActivity(Intent(MainActivity@this,BroadCastWorkingActivity::class.java))
     }
 
 }
