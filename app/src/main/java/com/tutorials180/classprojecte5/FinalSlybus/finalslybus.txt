@@ -49,7 +49,7 @@
     Receive SMS, display a toast
 23- Services
     service create, add service to manifest, service start, service stop
-24- Threads
+24- Alert Dialog
 
 
 
