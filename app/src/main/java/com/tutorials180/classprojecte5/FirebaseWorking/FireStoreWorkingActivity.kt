@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
+import com.google.firebase.ktx.Firebase
 import com.tutorials180.classprojecte5.FirebaseWorking.Objects.Employee
 import com.tutorials180.classprojecte5.R
 import com.tutorials180.classprojecte5.databinding.ActivityFireStoreWorkingBinding
@@ -21,6 +23,8 @@ class FireStoreWorkingActivity : AppCompatActivity()
 
         setContentView(mFSWBinder.root)
         mFireStore= FirebaseFirestore.getInstance()
+
+        //mFireStore = Firebase.firestore
 
         mFSWBinder.fsWorkingAddSingleDocBtn.setOnClickListener { addSingleDocument() }
         mFSWBinder.fsWorkingAddSingleDocWithModelBtn.setOnClickListener {
