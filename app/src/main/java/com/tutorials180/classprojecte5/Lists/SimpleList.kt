@@ -8,11 +8,11 @@ import com.tutorials180.classprojecte5.R
 
 class SimpleList : AppCompatActivity() {
 
-    var ourNameList=arrayOf("Safi","Safi","Safi","Safi","Safi","Safi","Safi","Safi",
-        "Safi","Safi","Safi","Safi","Safi",
-        "Safi","Safi","Safi","Safi","Safi",
-        "Safi","Safi","Safi","Safi",
-        "Safi")
+        var ourNameList=arrayOf("Safi","Safi","Safi","Safi","Safi","Safi","Safi","Safi",
+            "Safi","Safi","Safi","Safi","Safi",
+            "Safi","Safi","Safi","Safi","Safi",
+            "Safi","Safi","Safi","Safi",
+            "Safi")
 
     lateinit var nameListView:ListView
     override fun onCreate(savedInstanceState: Bundle?) {
